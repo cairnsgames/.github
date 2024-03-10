@@ -13,3 +13,22 @@ Above Tenant we have Auth(entication). A user authenticates with their username/
 Auth is currently in development.
 
 To register a tenant you use the third layer, membership. Membership is both a library layer and the first layer of application. The Cairnsgames membership site allows the creation of Applications and the management of users. (and will contain Feature Flags, Application settings - both overridable by User information)
+
+## Library Repository
+
+A library is a repository that contains
+
+1. A library\* folder, this is a normal Nnpmjs library that can be installed form Github
+2. A packages\* folder that is a Module Federation version of the library. This can be installed using module federation and in this way the latest version is always presented
+
+## Application Repository
+
+An application is a Module Federation how that imports the Module Federation libraries above.
+
+## Default Ports
+
+Default ports when working locally to allow multiple Module Federation apps to run locally.
+
+- Tenant: 3051
+- Auth: 3052
+- Membership: 3053
