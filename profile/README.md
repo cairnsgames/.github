@@ -25,6 +25,18 @@ The packages folder (as a standard) is the same name as the library suffixed wit
 
 The Packages folder also acts as a demo of the library, or alternatly the application that supports the library. As an example membershipmf is the actual application to manage Applications and Memberships.
 
+## Styling
+
+Examples and Applications all use Bootstrap, react-bootstrap and sass for styling.
+
+Icons, we use react-bootstrap-icons. As an optimisation icons should be created as components in the repository. But during development we just import the whole library.
+
+## State Management
+
+We use react context for state management. Each library is expected to expose a provider that is imported in the application. We do not use useContext, instead we create subject hooks that expose the functionality for a set of data.
+
+e.g. useTenant exposes the context data for tenants.
+
 ## Deployment
 
 All code is built and deployed using GitHub actions.
