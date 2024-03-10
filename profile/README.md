@@ -21,6 +21,18 @@ A library is a repository that contains
 1. A library\* folder, this is a normal Nnpmjs library that can be installed form Github
 2. A packages\* folder that is a Module Federation version of the library. This can be installed using module federation and in this way the latest version is always presented
 
+The packages folder (as a standard) is the same name as the library suffixed with mf (for Module Federation).
+
+The Packages folder also acts as a demo of the library, or alternatly the application that supports the library. As an example membershipmf is the actual application to manage Applications and Memberships.
+
+## Deployment
+
+All code is built and deployed using GitHub actions.
+
+- Organisation Variables are used for public information
+- Organisation secrets are used for Passwords
+- Repository variables are used for values specific to the repo (e.g. Folder names) 
+
 ## Application Repository
 
 An application is a Module Federation how that imports the Module Federation libraries above.
